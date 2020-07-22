@@ -1,0 +1,4 @@
+config BOARD_STM32F401CC_MINIMAL
+	bool "STM32F401CC Minimal Development Board"
+	depends on SOC_STM32F401XC
+

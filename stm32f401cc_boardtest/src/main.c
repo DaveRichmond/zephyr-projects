@@ -1,7 +1,7 @@
 #include <zephyr.h>
 #include <sys/printk.h>
-#include <sys/shell.h>
-#include <sys/shell_uart.h>
+#include <shell/shell.h>
+#include <shell/shell_uart.h>
 #include <version.h>
 #include <logging/log.h>
 #include <stdlib.h>
@@ -17,7 +17,7 @@ static int cmd_demo_ping(const struct shell *shell, size_t argc, char **argv){
 	return 0;
 }
 
-static int cmd_versio(const struct shell *shell, size_t argc, char **argv){
+static int cmd_version(const struct shell *shell, size_t argc, char **argv){
 	ARG_UNUSED(argc);
 	ARG_UNUSED(argv);
 
@@ -27,7 +27,7 @@ static int cmd_versio(const struct shell *shell, size_t argc, char **argv){
 }
 
 SHELL_STATIC_SUBCMD_SET_CREATE(sub_demo,
-	SHELL_CMD(ping, NULL, "Ping command.", cmd_demo_ping);
+	SHELL_CMD(ping, NULL, "Ping command.", cmd_demo_ping),
 	SHELL_SUBCMD_SET_END /* Array terminated */
 );
 SHELL_CMD_REGISTER(demo, &sub_demo, "Demo commands", NULL);

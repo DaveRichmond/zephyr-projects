@@ -1,0 +1,16 @@
+identifier: stm32f401cc_minimal
+name: STM32F401CC-Minimal
+type: mcu
+arch: arm
+toolchain:
+  - zephyr
+  - gnuarmemb
+supported:
+  - usb_device
+  - pwm
+  - counter
+  - gpio
+  - spi
+  - i2c
+  - adc
+  - watchdog

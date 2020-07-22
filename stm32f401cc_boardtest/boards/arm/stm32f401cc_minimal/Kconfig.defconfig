@@ -1,0 +1,16 @@
+if BOARD_STM32F401CC_MINIMAL
+
+config BOARD
+	default "stm32f401cc_miniamal"
+
+if WATCHDOG
+
+config WWDG_STM32
+	default y
+
+config IWDG_STM32
+	default y
+
+endif # WATCHDOG
+
+endif # BOARD_STM32F401CC_MINIMAL
